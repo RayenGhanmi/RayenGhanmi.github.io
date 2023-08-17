@@ -23,7 +23,7 @@ function sendContact(ev) {
       return members.includes(email);
     }
 
-    const webhookUrl = 'https://discord.com/api/webhooks/your_webhook_url_here';
+    const webhookUrl = 'https://discord.com/api/webhooks/1129345264528932934/VzuvV07_tDBoy_LL-_b1lsNewLVtjLUQbg8ZCyrFQOpK7KcQ8agqBPdgZScup5FEPqOg';
     const mbr = isMember(senderEmail) ? 'Member' : 'Not a member';
 
     const webhookBody = {
