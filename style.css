@@ -189,6 +189,11 @@ a .social:hover {
   line-height: 1.8;
 
 }
+
+a {
+  text-decoration: none;
+}
+
 .bg-color {
   --s: 50px;
   --c: #191b22;
@@ -203,4 +208,46 @@ a .social:hover {
     repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
     radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
   background-attachment: fixed;
+}
+
+button {
+  width: 8.5em;
+  height: 2.5em;
+  margin: 1.25em 0.625em;
+  font-weight: 700;
+  border: 0.125em solid #f177a6;
+  cursor: pointer;
+  border-radius: 1.563em;
+  text-align: center;
+  overflow: hidden;
+  color: #f0f8ff;
+  font-size: 1.25em;
+  background: 0 0;
+  position: relative;
+}
+
+span {
+  width: 0;
+  background: #f177a6;
+  position: absolute;
+  transition: 0.5s;
+  left: 0;
+  border-radius: 1.563em;
+  z-index: -1;
+}
+
+iframe,
+span {
+  bottom: 0;
+  height: 100%;
+}
+
+button:hover span,
+iframe {
+  width: 100%;
+}
+
+button:hover,
+iframe {
+  border: none;
 }

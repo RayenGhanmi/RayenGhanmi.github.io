@@ -1,36 +1,24 @@
-function loadJSON(callback) {
-  const xhr = new XMLHttpRequest();
-  xhr.overrideMimeType('application/json');
-  xhr.open('GET', './sources/members.json', true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      callback(JSON.parse(xhr.responseText));
-    }
-  };
-  xhr.send(null);
-}
-
-function sendContact(ev) {
+async function sendContact(ev) {
   ev.preventDefault();
 
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
-  loadJSON(function (data) {
-    const members = data.members;
+  const webhookUrl = 'https://discord.com/api/webhooks/1129345264528932934/VzuvV07_tDBoy_LL-_b1lsNewLVtjLUQbg8ZCyrFQOpK7KcQ8agqBPdgZScup5FEPqOg';
 
-    function isMember(email) {
-      return members.includes(email);
-    }
-
-    const webhookUrl = 'https://discord.com/api/webhooks/1129345264528932934/VzuvV07_tDBoy_LL-_b1lsNewLVtjLUQbg8ZCyrFQOpK7KcQ8agqBPdgZScup5FEPqOg';
-    const mbr = isMember(senderEmail) ? 'Member' : 'Not a member';
-
-    const webhookBody = {
+  if (!true)
+  {
+    mbr = 'Member'
+  }
+  else
+  {
+    mbr = 'Not a member'
+  }
+  const webhookBody = {
     embeds: [
       {
-        title: 'New submission',
-        description: senderMessage,
+        title: '**New submission**',
+        description: '```'+senderMessage+'```',
         color: 0xf177a6,
         author: {
           name: senderEmail,
@@ -47,8 +35,19 @@ function sendContact(ev) {
 	      },
         fields: [
           {
-            name: 'Membership',
-            value: mbr,
+            name: '**Section**',
+            value: '> Feedback',
+            inline: true
+          },
+          {
+            name: '**Membership**',
+            value: '> '+mbr,
+            inline: true
+          },
+          {
+            name: '**Rating**',
+            value: '> Not rated',
+            inline: true
           },
         ],
       }
@@ -56,24 +55,24 @@ function sendContact(ev) {
   };
 
   try {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', webhookUrl, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          alert('Message sent successfully');
-          location.reload();
-        } else {
-          console.error('Failed to send webhook');
-          alert('There was an error! Try again later or contact the developer.');
-        }
-      }
-    };
-    xhr.send(JSON.stringify(webhookBody));
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(webhookBody)
+    });
+
+    if (response.ok) {
+      alert("message sent successfully");
+      location.reload();
+    } else {
+      throw new Error('Failed to send webhook');
+    }
   } catch (error) {
     console.error('An error occurred:', error);
     alert('There was an error! Try again later or contact the developer.');
   }
-});
+
+  location.reload();
 }

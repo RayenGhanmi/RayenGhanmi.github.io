@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="animation.css">
   <script src="sources/scrolling.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 </head>
 
 <body class="bg-color" style="font-family: normaltext;">
@@ -56,19 +57,20 @@
       <p>• <a target="_SEJ" href="https://github.com/rayenghanmi/discord-bot/blob/main/bot.py">Check it out</a>.</p>
     </section>
       <footer style="text-align: center; color: #ffffff; padding: 1%;">
-        <a target="_SEJ" href="https://www.buymeacoffee.com/rayen.ghanmi.22"><img src="https://img.buymeacoffee.com/button-api/?text=Support Me&emoji=&slug=ghanmirayen&button_colour=f177a6&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=FFDD00" /></a><br><br>
-        <p class="center" style="font-family: normaltext; font-size: 1.2em; color: #f177a6; font-weight: bold;padding: 0.5em; border-radius: 15px; width: 150px; background-color: #0000009f;" id="corner">Contact Me:</p>
-        <br><br>
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rayen.ghanmi.22" data-description="Support me on Buy me a coffee!" data-message="Fuel my work with a coffee ☕️" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
         <form onsubmit="sendContact(event)">
-          <input title="Enter your email" id="emailInput" name="email" style="border-radius: 15px; width: 230px; height: 1.4em; background-color: #0000009f; border-width: 2px; border-color: #f177a6; resize: none; padding: 5px; font-family: normaltext; font-size: 15px; color: #fff;" placeholder="Your email" required oninvalid="this.setCustomValidity('Rayen Ghanmi needs your email so he can reply'); this.className = 'error'" oninput="setCustomValidity('')">
+          <input id="emailInput" type="email" name="email" style="border-radius: 15px; width: 230px; height: 1.4em; background-color: #0000009f; border-width: 2px; border-color: #f177a6; resize: none; padding: 5px; font-family: normaltext; font-size: 15px; color: #fff;" placeholder="Your email" required>
           <br><br>
-          <textarea title="What do you think about us" id="messageInput" name="message" style="border-radius: 15px; width: 90%; height: 10em; background-color: #0000009f; border-color: #f177a6; border-width: 2px; resize: none; padding: 10px; font-family: normaltext; font-size: 18px; color: #fff;" placeholder="What's on your mind?" required></textarea>
+          <textarea id="messageInput" name="message" style="border-radius: 15px; width: 90%; height: 10em; background-color: #0000009f; border-color: #f177a6; border-width: 2px; resize: none; padding: 10px; font-family: normaltext; font-size: 18px; color: #fff;" placeholder="What's on your mind?" required></textarea>
           <a id="buttonContainer" style="filter: drop-shadow(0 0 .313em #f177a6)">
-            <button title="send this form to the developer" style="font-family: title;z-index: 1; filter: drop-shadow(0.063em .063em .313em #f177a6);" type="submit"><span></span>Send</button>
+            <button style="font-family: title;z-index: 1; filter: drop-shadow(0.063em .063em .313em #f177a6);" type="submit"><span></span>Send</button>
           </a>
           <script src="sources/discord.js"></script>
+        <br><br>
         </form>
         <div>
+          <p class="center" style="font-family: normaltext; font-size: 1.2em; color: #f177a6; font-weight: bold;padding: 0.5em; border-radius: 15px; width: 150px; background-color: #0000009f;" id="corner">Contact Me:</p>
+          <br>
           <a style="pointer-events: none;" target="_SEJ" href="https://www.facebook.com/rayen.ghanmi.22" class="center"><img class="social" style="pointer-events: visible;" src="sources/facebook.svg" alt="facebook logo" width="50px" height="50px"></a>
           <a style="pointer-events: none;" target="_SEJ" href="https://www.twitter.com/rayen_ghanmi_22" class="center"><img class="social" style="pointer-events: visible;" src="sources/twitter.svg" alt="twitter logo" width="50px" height="50px"></a>
           <a style="pointer-events: none;" target="_SEJ" href="https://www.instagram.com/rayen.ghanmi.22" class="center"><img class="social" style="pointer-events: visible;" src="sources/instagram.svg" alt="instagram logo" width="50px" height="50px"></a>
@@ -82,5 +84,4 @@
 </main>
   <script src="sources/animation.js"></script>
 </body>
-
 </html>
