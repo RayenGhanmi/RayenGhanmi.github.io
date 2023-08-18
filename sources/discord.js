@@ -10,7 +10,7 @@ async function sendContact(ev) {
 
   // Read the list of valid emails
   try {
-    const response = await fetch('validEmails.json');
+    const response = await fetch('./sources/data.json');
     const validEmails = await response.json();
 
     if (validEmails.includes(senderEmail)) {
