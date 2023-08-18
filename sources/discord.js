@@ -1,43 +1,29 @@
 async function sendContact(ev) {
   ev.preventDefault();
 
-  const fs = require('fs');
-
-// Read the JSON file
-fs.readFile('data.json', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading JSON file:', err);
-    return;
-  }
-
-  const jsonData = JSON.parse(data);
-
-  // Email to search for
-  const targetEmail = 'ghanmirayen12@gmail.com';
-
-  // Check if the email exists in the JSON data
-  const emailExists = jsonData.some(item => item.email === targetEmail);
-
-  if (emailExists) {
-    console.log('Email exists in the JSON data.');
-  } else {
-    console.log('Email does not exist in the JSON data.');
-  }
-});
-
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
   const webhookUrl = 'https://discord.com/api/webhooks/1129345264528932934/VzuvV07_tDBoy_LL-_b1lsNewLVtjLUQbg8ZCyrFQOpK7KcQ8agqBPdgZScup5FEPqOg';
 
-  if (emailExists)
-  {
-    mbr = 'Member'
+  let mbr;
+
+  // Read the list of valid emails
+  try {
+    const response = await fetch('validEmails.json');
+    const validEmails = await response.json();
+
+    if (validEmails.includes(senderEmail)) {
+      mbr = 'Member';
+    } else {
+      mbr = 'Not a member';
+    }
+  } catch (error) {
+    console.error('An error occurred while loading valid emails:', error);
+    alert('There was an error! Try again later or contact the developer.');
+    return;
   }
-  else
-  {
-    mbr = 'Not a member'
-  }
+
   const webhookBody = {
     embeds: [
       {
@@ -88,7 +74,7 @@ fs.readFile('data.json', 'utf8', (err, data) => {
     });
 
     if (response.ok) {
-      alert("message sent successfully");
+      alert('Message sent successfully');
       location.reload();
     } else {
       throw new Error('Failed to send webhook');
@@ -97,6 +83,4 @@ fs.readFile('data.json', 'utf8', (err, data) => {
     console.error('An error occurred:', error);
     alert('There was an error! Try again later or contact the developer.');
   }
-
-  location.reload();
 }
