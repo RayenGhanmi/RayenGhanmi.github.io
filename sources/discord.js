@@ -6,24 +6,14 @@ async function sendContact(ev) {
 
   const webhookUrl = 'https://discord.com/api/webhooks/1129345264528932934/VzuvV07_tDBoy_LL-_b1lsNewLVtjLUQbg8ZCyrFQOpK7KcQ8agqBPdgZScup5FEPqOg';
 
-  let mbr;
-
-  // Read the list of valid emails
-  try {
-    const response = await fetch('./sources/data.json');
-    const validEmails = await response.json();
-
-    if (validEmails.includes(senderEmail)) {
-      mbr = 'Member';
-    } else {
-      mbr = 'Not a member';
-    }
-  } catch (error) {
-    console.error('An error occurred while loading valid emails:', error);
-    alert('There was an error! Try again later or contact the developer.');
-    return;
+  if (!true)
+  {
+    mbr = 'Member'
   }
-
+  else
+  {
+    mbr = 'Not a member'
+  }
   const webhookBody = {
     embeds: [
       {
@@ -74,7 +64,7 @@ async function sendContact(ev) {
     });
 
     if (response.ok) {
-      alert('Message sent successfully');
+      alert("message sent successfully");
       location.reload();
     } else {
       throw new Error('Failed to send webhook');
@@ -83,4 +73,6 @@ async function sendContact(ev) {
     console.error('An error occurred:', error);
     alert('There was an error! Try again later or contact the developer.');
   }
+
+  location.reload();
 }
