@@ -185,7 +185,6 @@ a .social:hover {
   margin: auto;
   width: 95%;
   padding: 1.5em;
-  user-select: none;
   line-height: 1.8;
 
 }
@@ -250,4 +249,22 @@ iframe {
 button:hover,
 iframe {
   border: none;
+}
+
+input {
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e8afc5;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+}
+
+input:checked {
+  border: 5px solid #f177a6;
+}
+.unhoverable {
+  pointer-events: none;
 }

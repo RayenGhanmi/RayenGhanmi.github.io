@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="animation.css">
   <script src="sources/scrolling.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
 </head>
 
 <body class="bg-color" style="font-family: normaltext;">
@@ -59,15 +58,21 @@
       <footer style="text-align: center; color: #ffffff; padding: 1%;">
         <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="rayen.ghanmi.22" data-description="Support me on Buy me a coffee!" data-message="Fuel my work with a coffee ☕️" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
         <form onsubmit="sendContact(event)">
+          <p class="center" style="font-family: normaltext; font-size: 1.2em; color: #f177a6; font-weight: bold;padding: 0.5em; border-radius: 15px; width: 250px; background-color: #0000009f;" id="corner">How satisfied are you?</p>
+          <div style="padding: 25px;">
+            <label><input checked type="radio" name="options" value="option1"> Pleased</label>
+            <label><input type="radio" name="options" value="option2"> Moderate</label>
+            <label><input type="radio" name="options" value="option3"> Unhappy</label>
+          </div>
           <input id="emailInput" type="email" name="email" style="border-radius: 15px; width: 230px; height: 1.4em; background-color: #0000009f; border-width: 2px; border-color: #f177a6; resize: none; padding: 5px; font-family: normaltext; font-size: 15px; color: #fff;" placeholder="Your email" required>
           <br><br>
           <textarea id="messageInput" name="message" style="border-radius: 15px; width: 90%; height: 10em; background-color: #0000009f; border-color: #f177a6; border-width: 2px; resize: none; padding: 10px; font-family: normaltext; font-size: 18px; color: #fff;" placeholder="What's on your mind?" required></textarea>
           <a id="buttonContainer" style="filter: drop-shadow(0 0 .313em #f177a6)">
-            <button style="font-family: title;z-index: 1; filter: drop-shadow(0.063em .063em .313em #f177a6);" type="submit"><span></span>Send</button>
+            <button id="sendButton" style="font-family: title;z-index: 1; filter: drop-shadow(0.063em .063em .313em #f177a6);" type="submit"><span></span>Send</button>
           </a>
           <script src="sources/discord.js"></script>
         <br><br>
-        </form>
+        </form>   
         <div>
           <p class="center" style="font-family: normaltext; font-size: 1.2em; color: #f177a6; font-weight: bold;padding: 0.5em; border-radius: 15px; width: 150px; background-color: #0000009f;" id="corner">Contact Me:</p>
           <br>
@@ -82,6 +87,4 @@
         </div>
         </footer>
 </main>
-  <script src="sources/animation.js"></script>
-</body>
 </html>
