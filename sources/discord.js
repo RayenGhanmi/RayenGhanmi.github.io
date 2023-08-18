@@ -1,12 +1,36 @@
 async function sendContact(ev) {
   ev.preventDefault();
 
+  const fs = require('fs');
+
+// Read the JSON file
+fs.readFile('data.json', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading JSON file:', err);
+    return;
+  }
+
+  const jsonData = JSON.parse(data);
+
+  // Email to search for
+  const targetEmail = 'ghanmirayen12@gmail.com';
+
+  // Check if the email exists in the JSON data
+  const emailExists = jsonData.some(item => item.email === targetEmail);
+
+  if (emailExists) {
+    console.log('Email exists in the JSON data.');
+  } else {
+    console.log('Email does not exist in the JSON data.');
+  }
+});
+
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
   const webhookUrl = 'https://discord.com/api/webhooks/1129345264528932934/VzuvV07_tDBoy_LL-_b1lsNewLVtjLUQbg8ZCyrFQOpK7KcQ8agqBPdgZScup5FEPqOg';
 
-  if (!true)
+  if (emailExists)
   {
     mbr = 'Member'
   }
