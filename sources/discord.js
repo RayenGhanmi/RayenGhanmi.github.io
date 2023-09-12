@@ -1,4 +1,4 @@
-async function sendContact(ev) {
+  async function sendContact(ev) {
   ev.preventDefault();
 
   const senderEmail = document.getElementById('emailInput').value;
@@ -45,7 +45,7 @@ async function sendContact(ev) {
         timestamp: new Date().toISOString(),
         footer: {
           text: 'Website',
-          icon_url: 'https://i.imgur.com/CVTIrwN.png',
+          icon_url: 'https://i.imgur.com/C8LEiGt.png',
         },
         fields: [
           {
