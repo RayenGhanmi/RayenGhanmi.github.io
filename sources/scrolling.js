@@ -1,1 +1,0 @@
-function scrollToSection(e,t){e.preventDefault();var n=document.getElementById(t);n.scrollIntoView({behavior:"smooth",block:"start"})}
