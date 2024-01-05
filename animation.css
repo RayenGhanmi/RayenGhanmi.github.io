@@ -1,1 +1,0 @@
-.animate-in{-webkit-animation:0.5s ease-in fadeIn;animation:0.5s ease-in fadeIn}.animate-out{-webkit-transition:opacity 0.5s;transition:opacity 0.5s;opacity:0}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
