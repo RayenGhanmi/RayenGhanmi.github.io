@@ -59,8 +59,8 @@
           background-color: #121212;
           color: #ffffff;
           margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+          padding: 0;
+          overflow-x: hidden;
       }
 
       header {
@@ -222,6 +222,87 @@
             transform: rotateX(20deg) rotateY(-20deg);
         }
 
+        #myImg {
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .myImg:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        
+        #caption {
+            margin: auto;
+            display: block;
+            text-align: center;
+            color: #f1f1f1;
+            padding: 10px 0;
+            height: 50px;
+        }
+        
+        .modal-content,
+        #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        @keyframes zoom {
+            from {
+                transform: scale(0.8);
+            }
+        
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #f177a6;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+                max-height: 100%;
+            }
+        }
+
     </style>
 </head>
 
@@ -234,7 +315,7 @@
     </header>
 
     <section class="cta">
-        <p>Boost your Windows experience with RyTuneX, a Windows 10 and 11 optimizer made using the WinUI 3 framework.</p>
+        <p>Boost your device's performance with RyTuneX, a Windows 10 and 11 optimizer made using the WinUI 3 framework.</p>
         <a href="https://github.com/rayenghanmi/RyTuneX/releases/latest" target="_blank" class="button">Get Started</a>
         <p><a href="https://github.com/rayenghanmi/RyTuneX" target="_blank">Open Source on GitHub</a></p>
     </section>
@@ -257,43 +338,79 @@
     <section class="screenshot-box">
         <h2>Screenshots</h2>
         <div class="screenshotL">
-            <img src="1.webp" alt="RyTuneX">
+            <img src="1.webp" alt="Main Page - Dark Theme" class="myImg">
         </div>
         <div class="screenshotL">
-            <img src="2.webp" alt="RyTuneX">
+            <img src="2.webp" alt="Debloat Section - Dark Theme" class="myImg">
         </div>
         <div class="screenshotR">
-            <img src="3.webp" alt="RyTuneX">
+            <img src="3.webp" alt="Debloat Section - Light Theme" class="myImg">
         </div>
         <div class="screenshotR">
-            <img src="4.webp" alt="RyTuneX">
+            <img src="4.webp" alt="Main Page - Light Theme" class="myImg">
         </div>
     </section>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+    
+    <script>
+        var modal = document.getElementById("myModal");
+        var images = document.querySelectorAll(".myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var span = document.getElementsByClassName("close")[0];
+    
+        images.forEach(function (img) {
+            img.addEventListener("click", function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
+    
+            img.addEventListener("mouseover", function () {
+                img.style.cursor = "pointer";
+            });
+    
+            img.addEventListener("mouseout", function () {
+                img.style.cursor = "default";
+            });
+        });
+    
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
 
     <section class="download-box">
         <div class="download">
             <h2>Get Started</h2>
             <a href="https://github.com/rayenghanmi/RyTuneX/releases/latest" target="_blank" class="button">Download Now</a>
-            <p>Facing a problem? Feel free to <a href="https://github.com/rayenghanmi/RyTuneX/issues/new" target="_blank">open an issue on GitHub</a> - I'm here to help!</p>
+            <p>Encountering an issue? <a href="https://github.com/rayenghanmi/RyTuneX/issues/new" target="_blank">Open an issue on GitHub</a> - I'm here to assist!</p>
         </div>
     </section>
 
     <section>
         <h2>Contact The Developer</h2>
-        <p>If you have any questions or feedback, feel free to reach out:</p>
+        <p>Have questions or feedback? Feel free to reach out:</p>
         <p>Email: <a href="mailto:ghanmirayen12@gmail.com" target="_blank">ghanmirayen12@gmail.com</a></p>
         <p>Twitter: <a href="https://twitter.com/rayen_ghanmi_23" target="_blank">@rayen_ghanmi_23</a></p>
         <p>Facebook: <a href="https://www.facebook.com/rayen.ghanmi.23" target="_blank">rayen.ghanmi.23</a></p>
         <br>
     </section>
 
-    <footer>
+    <footer class="footer-hide">
         <p class="license">&copy; 2024 Rayen Ghanmi. Licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL v3.0</a>.</p>
     </footer> 
 
     <script>
+        setTimeout(function () {
+        let footer = document.querySelector("footer");
+        footer.classList.remove("footer-hide");
         window.onscroll = function () {
-            let footer = document.querySelector("footer");
             let distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
 
             if (distanceFromBottom < 30) {
@@ -301,7 +418,8 @@
             } else {
                 footer.classList.add("footer-hide");
             }
-        }
+        };
+    }, 500);
     </script>
 
 </body>
