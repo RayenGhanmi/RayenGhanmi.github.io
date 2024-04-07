@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #333;
+}
+
+body {
+    font-family: "Exo", sans-serif;
+    background-color: #2c2c2c;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+}
+
+header {
+
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: #f177a6;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #2c2c2c;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: #3b3b3b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f177a6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #d3568f;
+}
+
+.screenshot-container img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+a:not(.button) {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+a:not(.button):hover {
+    color: #f177a6;
+}
+
+
+.footer {
+    background-color: #1f2937;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+.screenshot-box {
+    text-align: center;
+}
+
+.screenshot-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.screenshot-container img {
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #f1f1f1;
+    padding: 10px 0;
+    height: 50px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #f177a6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-scrollbar {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #f177a6;
+    border-radius: 15px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #333;
+  }
+
+  .custom-scrollbar::-moz-scrollbar {
+    width: 10px;
+  }
+
+  .custom-scrollbar::-moz-scrollbar-thumb {
+    background-color: #f177a6;
+    border-radius: 15px;
+  }
+
+  .custom-scrollbar::-moz-scrollbar-track {
+    background-color: #333;
+  }

@@ -5,676 +5,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
-    <meta property="og:title" content="Rayen Ghanmi">
+    <meta property="og:title" content="RyTuneX">
     <meta property="og:description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
-    <meta property="og:url" content="https://rayenghanmi.github.io/rytunex/">
-    <meta property="og:image" content="https://rayenghanmi.github.io/sources/rytunex_og.png">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="rytunex_og.png">
     <meta property="og:type" content="website">
-    <meta name="keywords" content="Windows optimization, Boost PC performance, System enhancement, Registry cleaning, Disk cleanup tools, Speed up slow computer, PC maintenance solutions, Fine-tune your PC, Repair registry errors, Advanced system cleaning, Performance boosting techniques, Startup optimization tips, Windows maintenance tools, Computer diagnostics software, Optimize software performance, PC cleanup utilities, System tweaks for speed, PC health optimization, Remove junk files, Windows utility software, Optimal system functioning, Enhanced system responsiveness, Android gaming, Immersive mobile games, Top game apps, Adventure gaming experiences, Strategic gameplay, Challenging puzzle games, Epic role-playing games, Thrilling multiplayer games, Casual gaming fun, Action-packed mobile games, Mobile entertainment experiences, Enhanced gaming adventures, Game development insights, App store game trends, Android entertainment, Mobile gaming excitement, Engaging game challenges, Progress through game levels, Vibrant gaming community, Latest mobile gaming trends, Discord bot development, Python-powered bots, Interactive chatbots, Automation through Discord, Streamlined Python scripting, Innovative bot development, Powerful Python programming, Customizable bot solutions, Effective Discord server management, Automated moderation bots, Fun and utility bots, Utilize Python libraries, Seamless API integration, Streamline Python scripting, Efficient code automation, Interactive bot commands, Harness Discord API, Expert Python coding, Online presence optimization, SEO strategies, Website ranking techniques, Content optimization, Keyword analysis, Search engine visibility, Organic search traffic, Search engine algorithms, Website search performance, Social media engagement, Backlink building, Quality content creation, User experience optimization, Mobile responsiveness, User-friendly interface, Web page loading speed, Technical SEO, On-page SEO, Off-page SEO, Local SEO strategies, Keyword-rich meta tags, HTML optimization, SERP ranking improvement, Content marketing strategies, Inbound marketing techniques, Social media marketing, Influencer collaboration, Video marketing campaigns, Data-driven SEO, Analytics tracking, Keyword density, Long-tail keywords, Google algorithm updates, Rank tracking tools, Rayen Ghanmi, Rayen, Ghanmi">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rayen Ghanmi">
-    <meta name="twitter:description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
-    <meta name="twitter:url" content="https://rayenghanmi.github.io/rytunex/">
-    <meta name="twitter:image" content="https://rayenghanmi.github.io/sources/rytunex_og.png">
-    <meta name="twitter:site" content="@rayen_ghanmi_23">
-    <meta name="twitter:creator" content="@rayen_ghanmi_23">
-    <link rel="shortcut icon" href="../sources/favicon.ico" type="image/x-icon">
     <title>RyTuneX</title>
-    <style>
-        .custom-scrollbar {
-          user-select: none;
-          -webkit-user-select: none;
-          -ms-user-select: none;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 10px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #f177a6;
-          border-radius: 15px;
-        }
-
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background-color: #333333;
-        }
-
-        .custom-scrollbar::-moz-scrollbar {
-          width: 10px;
-        }
-
-        .custom-scrollbar::-moz-scrollbar-thumb {
-          background-color: #f177a6;
-          border-radius: 15px;
-        }
-
-        .custom-scrollbar::-moz-scrollbar-track {
-          background-color: #333333;
-        }
-      body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #121212;
-          color: #ffffff;
-          margin: 0;
-          padding: 0;
-          overflow-x: hidden;
-          transition: background-color 0.3s ease;
-      }
-
-      header {
-
-          padding: 20px;
-          text-align: center;
-          background-color: #1e1e1e;
-          transition: background-color 0.3s ease;
-      }
-
-      h1 {
-          color: #f177a6;
-      }
-
-      section {
-          padding: 40px;
-          text-align: center;
-      }
-
-      .features {
-          display: flex;
-          justify-content: space-around;
-          flex-wrap: wrap;
-          margin-top: 30px;
-      }
-
-      .feature {
-          flex: 1;
-          padding: 20px;
-          margin: 10px;
-          border: 1px solid #333333;
-          border-radius: 8px;
-      }
-
-      .screenshots img {
-          max-width: 100%;
-          border-radius: 8px;
-          margin: 10px 0;
-      }
-
-      .license {
-          color: #888888;
-          font-size: 14px;
-      }
-      .feature-box {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .feature-box h2 {
-            flex: 100%;
-            margin-bottom: 20px;
-            color: #f177a6;
-        }
-        .feature-box p {
-            flex: 100%;
-            margin-bottom: 20px;
-        }
-        .feature {
-            flex: 1;
-            padding: 20px;
-            margin: 10px;
-            border: 1px solid #333333;
-            border-radius: 8px;
-        }
-
-        .download-box {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .download {
-            flex: 1;
-            padding: 20px;
-            margin: 10px;
-            border: 1px solid #333333;
-            border-radius: 8px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            text-align: center;
-            text-decoration: none;
-            background-color: #f177a6;
-            color: #ffffff;
-            border: 2px solid #f177a6;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #e44d80;
-            border-color: #e44d80;
-            color: #ffffff;
-            transform: scale(1.05);
-        }
-
-        footer {
-            padding: 10px;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-            background-color: #1e1e1e;
-            transition: background-color 0.3s ease;
-        }
-        a {
-            color: #f177a6;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #e44d80;
-        }
-
-        .screenshot-box {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .screenshot-box h2 {
-            flex: 100%;
-            margin-bottom: 20px;
-            color: #f177a6;
-        }
-
-        .screenshotL,
-        .screenshotR {
-            flex: 1;
-            margin: 10px;
-            border-radius: 8px;
-            perspective: 1000px;
-            overflow: hidden;
-        }
-
-        .screenshotL:hover img,
-        .screenshotR:hover img {
-            transform: rotateX(0deg) rotateY(0deg) scale(1.25);
-        }
-        
-        .screenshotL img,
-        .screenshotR img {
-            margin: 10px;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.35s ease;
-        }
-
-        .screenshotL img {
-            transform: rotateX(20deg) rotateY(20deg);
-        }
-        .screenshotR img {
-            transform: rotateX(20deg) rotateY(-20deg);
-        }
-
-        #myImg {
-          border-radius: 5px;
-          cursor: pointer;
-          transition: 0.3s;
-        }
-
-        .myImg:hover {
-            opacity: 0.7;
-            cursor: pointer;
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 50px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 80%;
-            max-height: 80%;
-            object-fit: contain;
-        }
-        
-        #caption {
-            margin: auto;
-            display: block;
-            text-align: center;
-            color: #f1f1f1;
-            padding: 10px 0;
-            height: 50px;
-        }
-        
-        .modal-content,
-        #caption {
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-        
-        @keyframes zoom {
-            from {
-                transform: scale(0.8);
-            }
-        
-            to {
-                transform: scale(1);
-            }
-        }
-        
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: #f177a6;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        @media only screen and (max-width: 700px) {
-            .modal-content {
-                width: 100%;
-                max-height: 100%;
-            }
-        }
-        .faq-question {
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border: 1px solid #333333;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-    
-        .faq-question:hover {
-            background-color: #f177a6;
-        }
-    
-        .arrow {
-            font-size: 16px;
-            transform: rotate(0deg);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-question.active .arrow {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
-        }    
-        .faq-answer {
-            display: none;
-            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-        }
-    
-        .faq-answer.visible {
-            display: block;
-            max-height: 500px;
-            opacity: 1;
-        }
-        .faq-question,
-        .faq-answer {
-            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-        }
-        .top-bar {
-            position: relative;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #1e1e1e90;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: transform 0.5s ease;
-            z-index: 1000;
-        }
-
-        .top-bar.hide {
-            transform: translateY(-100%);
-        }
-
-        .top-bar a {
-            color: #f177a6;
-            margin-right: 20px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .top-bar a:hover {
-            color: #e44d80;
-        }
-
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        body.dark-mode header,
-        body.dark-mode footer {
-            background-color: #1e1e1e;
-        }
-
-        h1.dark-mode {
-            color: #f177a6;
-        }
-
-        .faq-question.dark-mode,
-        .faq-answer.dark-mode {
-            background-color: #333333;
-            border: 1px solid #ffffff;
-            color: #ffffff;
-        }
-
-        body.light-mode {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        
-        body.light-mode header,
-        body.light-mode footer {
-            background-color: #f0f0f0;
-        }
-
-        h1.light-mode {
-            color: #f177a6;
-        }
-
-        .faq-question.light-mode,
-        .faq-answer.light-mode {
-            background-color: #f0f0f0;
-            border: 1px solid #000000;
-            color: #000000;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="top-bar" id="myTopBar">
-        <div>
-            <a href="#download">Download</a>
-            <a href="#about">About</a>
-        </div>
-        <button id="theme-toggle" class="button">Lighten it!</button>
-    </div>
-    <header>
-        <script src="https://tfpb.techforpalestine.org/lib/banner.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://tfpb.techforpalestine.org/lib/banner.min.js"></script>
     <script>
       TFPBanner.create({
-        theme: "auto",
+        theme: "dark",
         fixed: false,
       });
     </script>
-        <img src="rytunex.png" alt="RyTuneX Logo" style="max-width: 65px; height: auto; margin-bottom: 5px;">
+</head>
+
+<body>
+    <header>
+        <img src="rytunex.png" alt="RyTuneX Logo" class="logo">
         <h1>RyTuneX</h1>
         <p>Windows 10 and 11 Optimizer, By Rayen Ghanmi</p>
     </header>
-    <script>
-        var topBar = document.querySelector('.top-bar');
-    
-        var themeToggle = document.getElementById('theme-toggle');
-        var body = document.body;
-    
-        themeToggle.addEventListener('click', function () {
-            body.classList.toggle('dark-mode');
-            body.classList.toggle('light-mode');
-            topBar.classList.toggle('dark-mode', body.classList.contains('dark-mode'));
-            var buttonText = body.classList.contains('dark-mode') ? 'Darken it!' : 'Lighten it!';
-            themeToggle.textContent = buttonText;
-        });
-    </script>
-    <section class="cta">
-        <p>Boost your device's performance with RyTuneX, a Windows 10 and 11 optimizer made using the WinUI 3 framework.</p>
-        <a href="https://github.com/rayenghanmi/RyTuneX/releases/latest" target="_blank" class="button">Get Started</a>
-        <p><a href="https://github.com/rayenghanmi/RyTuneX" target="_blank">Open Source on GitHub</a></p>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About RyTuneX</h2>
+            <p>RyTuneX is all about making your Windows experience better. It's designed to optimize your Windows 10 and 11 systems for improved performance and privacy. With RyTuneX, you can easily remove unwanted apps, tweak system settings, and enhance your overall computing experience.</p>
+        </div>
     </section>
 
-    <section class="feature-box">
-        <div class="feature">
-            <h2>Optimize Performance</h2>
-            <p>Disable unnecessary background services to streamline system resources, enhancing overall performance.</p>
-        </div>
-        <div class="feature">
-            <h2>Selective App Removal</h2>
-            <p>Remove unwanted pre-installed apps that are typically hard to uninstall, freeing up valuable storage space.</p>
-        </div>
-        <div class="feature">
-            <h2>Privacy Enhancements</h2>
-            <p>Enhance privacy by blocking telemetry and data collection processes, ensuring a more secure computing environment.</p>
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Optimize Performance</h3>
+                    <p>Streamline system resources to enhance overall performance.</p>
+                </div>
+                <div class="feature">
+                    <h3>Remove Unwanted Apps</h3>
+                    <p>Easily uninstall stubborn pre-installed apps.</p>
+                </div>
+                <div class="feature">
+                    <h3>Enhance Privacy</h3>
+                    <p>Block telemetry and data collection processes for increased privacy.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="screenshot-box">
         <h2>Screenshots</h2>
-        <div class="screenshotL">
-            <img src="1.webp" alt="Main Page - Dark Theme" class="myImg">
+        <div class="screenshot-container">
+            <img src="rytunex_1.webp" alt="Main Page - Dark Theme" onclick="openModal('1.webp', 'Main Page - Dark Theme')">
+            <img src="rytunex_2.webp" alt="Debloat Section - Dark Theme" onclick="openModal('2.webp', 'Debloat Section - Dark Theme')">
+            <img src="rytunex_3.webp" alt="Debloat Section - Light Theme" onclick="openModal('3.webp', 'Debloat Section - Light Theme')">
+            <img src="rytunex_4.webp" alt="Main Page - Light Theme" onclick="openModal('4.webp', 'Main Page - Light Theme')">
         </div>
-        <div class="screenshotL">
-            <img src="2.webp" alt="Debloat Section - Dark Theme" class="myImg">
-        </div>
-        <div class="screenshotR">
-            <img src="3.webp" alt="Debloat Section - Light Theme" class="myImg">
-        </div>
-        <div class="screenshotR">
-            <img src="4.webp" alt="Main Page - Light Theme" class="myImg">
-        </div>
-    </section>
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-        <div id="caption"></div>
-    </div>
-    
-    <section id="about" class="feature-box">
-        <div class="feature">
-            <h2>ABOUT RYTUNEX</h2>
-            <p>RyTuneX is all about making your Windows experience better. I've developed an optimizer using the WinUI 3 framework to boost the performance of your Windows 10 and 11 devices. With RyTuneX, you can easily remove stubborn pre-installed apps, reclaim storage space, and disable unnecessary background services for smoother performance.</p>
-        </div>
-        <div class="feature">
-            <h2>HOW I STARTED</h2>
-            <p>Before RyTuneX, I created RGH Optimizer and Perfexa to optimize gaming PCs. Seeking improvement, RyTuneX emerged from personal experiences and lessons learned. It's more than an optimizer; it's a refined solution born from a commitment to continuous improvement, addressing the evolving needs of the community.</p>
-        </div>
-        <div class="feature">
-            <h2>GET IN TOUCH</h2>
-            <p>Navigating technology can be tricky, but I'm here to make your computing experience seamless and enjoyable. Feel free to reach out anytime for help or troubleshooting on my <a href="https://discord.gg/gyBzyd364t" target="_blank">Discord Server</a>.</p>
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+            <div id="caption"></div>
         </div>
     </section>
 
-    <script>
-        var topBar = document.querySelector('.top-bar');
-        var modal = document.getElementById("myModal");
-        var images = document.querySelectorAll(".myImg");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        var span = document.getElementsByClassName("close")[0];
-    
-        images.forEach(function (img) {
-            img.addEventListener("click", function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-                topBar.classList.add('hide');
-            });
-    
-            img.addEventListener("mouseover", function () {
-                img.style.cursor = "pointer";
-            });
-    
-            img.addEventListener("mouseout", function () {
-                img.style.cursor = "default";
-            });
-        });
-    
-        span.onclick = function () {
-            modal.style.display = "none";
-            topBar.classList.remove('hide');
-        };
-
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                topBar.classList.remove('hide');
-            }
-        });
-    </script>    
-
-    <section id="download" class="download-box">
-        <div class="download">
-            <h2>Get Started</h2>
-            <p style="font-weight: lighter;font-size: 14px;">Windows 10 20H1 or later</p>
-            <a href="https://github.com/rayenghanmi/RyTuneX/releases/latest" target="_blank" class="button">Download Now</a>
-            <p>Encountering an issue? <a href="https://github.com/rayenghanmi/RyTuneX/issues/new" target="_blank">Open an issue on GitHub</a> - I'm here to assist!</p>
+    <section id="features" class="section">
+        <div class="container">
+            <div class="features">
+                <div class="feature">
+                    <h3>ABOUT RYTUNEX</h3>
+                    <p>RyTuneX is all about making your Windows experience better. I've developed an optimizer using the WinUI 3 framework to boost the performance of your Windows 10 and 11 devices. With RyTuneX, you can easily remove stubborn pre-installed apps, reclaim storage space, and disable unnecessary background services for smoother performance.</p>
+                </div>
+                <div class="feature">
+                    <h3>HOW I STARTED</h3>
+                    <p>Before RyTuneX, I created RGH Optimizer and Perfexa to optimize gaming PCs. Seeking improvement, RyTuneX emerged from personal experiences and lessons learned. It's more than an optimizer; it's a refined solution born from a commitment to continuous improvement, addressing the evolving needs of the community.</p>
+                </div>
+                <div class="feature">
+                    <h3>GET IN TOUCH</h3>
+                    <p>Navigating technology can be tricky, but I'm here to make your computing experience seamless and enjoyable. Feel free to reach out anytime for help or troubleshooting on my <a href="https://discord.gg/gyBzyd364t" target="_blank">Discord Server</a>.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="feature-box">
+    <section id="download" class="section">
+        <div class="container">
+            <h2>Download RyTuneX</h2>
+            <p>Get started with RyTuneX today and optimize your Windows experience!</p>
+            <a style="margin: 15px;" href="download-link" class="button">Download Now</a>
+            <p style="font-weight:350 ;font-size: 13px;">Requires Windows 10 20H2 or later</p>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h3>Q: What is RyTuneX?</h3>
+                <p>RyTuneX is a tool designed to optimize your Windows 10 and 11 systems for improved performance and privacy.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: How does RyTuneX work?</h3>
+                <p>RyTuneX works by adjusting various system settings related to performance and privacy, providing a smoother computing experience.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: Is RyTuneX safe to use?</h3>
+                <p>Yes, RyTuneX is completely safe to use. It makes non-invasive changes that won't harm your computer or void any warranties.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: Will the changes made by RyTuneX harm my computer?</h3>
+                <p>No, the changes made by RyTuneX are non-invasive and won't cause harm to your computer or its components.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: What are the system requirements for RyTuneX?</h3>
+                <p>RyTuneX is designed to work with Windows 10 20H2 or later. It's continuously updated to ensure compatibility with the latest hardware and software.</p>
+            </div>
+            
+            <div class="faq">
+                <h3>Q: How can I get support for RyTuneX?</h3>
+                <p>If you need support or have any questions, you can join our <a target="_SEJ" href="https://discord.gg/gyBzyd364t">Discord Community</a> to connect with our support team and other users.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
         <h2>Explore RyTuneX</h2>
         <p>Discover the changes and optimizations made by RyTuneX to enhance your system's performance and privacy by clicking on the feature that you want to learn more about.</p>
         
-        <div class="feature">
-          <a target="_blank" href="advanced.html">Advanced Optimizations</a>
-          <p>Advanced system settings.</p>
-        </div>
-        
-        <div class="feature">
-          <a target="_blank" href="basic.html">Basic Optimizations</a>
-          <p>Fundamental performance tweaks.</p>
-        </div>
-        
-        <div class="feature">
-          <a target="_blank" href="performance.html">Performance Tweaks</a>
-          <p>Targeted performance tweaks.</p>
-        </div>
-        
-        <div class="feature">
-          <a target="_blank" href="privacy.html">Enhance Privacy</a>
-          <p>Data protection settings.</p>
-        </div>
-        
-        <div class="feature">
-          <a target="_blank" href="systemfeatures.html">System Features</a>
-          <p>Customize system functionalities.</p>
-        </div>
-        
-        <div class="feature">
-          <a target="_blank" href="telemetry.html">Telemetry</a>
-          <p>Control data collection.</p>
-        </div>
-        
-        <div class="feature">
-          <a target="_blank" href="windows11.html">Windows 11</a>
-          <p>Optimizations for Windows 11.</p>
-        </div>
-      </section>      
-      
-
-<section>
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq">
-        <div class="faq-question">
-            <h3>Q: What is RyTuneX?</h3>
-            <span class="arrow">&#9660;</span>
-        </div>
-        <p class="faq-answer">A: RyTuneX is a tool designed to boost the performance of your Windows 10 and 11 systems. It fine-tunes various settings to optimize your computer's performance for the tasks you do.</p>
-    </div>
-
-    <div class="faq">
-        <div class="faq-question">
-            <h3>Q: How does RyTuneX work?</h3>
-            <span class="arrow">&#9660;</span>
-        </div>
-        <p class="faq-answer">A: RyTuneX optimizes your computer by adjusting settings related to system performance and overall system parameters. It enhances your system for a smoother computing experience across various tasks.</p>
-    </div>
-
-    <div class="faq">
-        <div class="faq-question">
-            <h3>Q: Is RyTuneX safe to use?</h3>
-            <span class="arrow">&#9660;</span>
-        </div>
-        <p class="faq-answer">A: Yes, RyTuneX is completely safe to use. The changes made by RyTuneX are non-invasive and won't harm your computer or void any warranties.</p>
-    </div>
-
-    <div class="faq">
-        <div class="faq-question">
-            <h3>Q: Will the changes made by RyTuneX harm my computer?</h3>
-            <span class="arrow">&#9660;</span>
-        </div>
-        <p class="faq-answer">A: No, the changes made by RyTuneX are non-invasive and won't cause any harm to your computer or its components. It also won't void any warranties associated with your hardware.</p>
-    </div>
-
-    <div class="faq">
-        <div class="faq-question">
-            <h3>Q: What are the system requirements for RyTuneX?</h3>
-            <span class="arrow">&#9660;</span>
-        </div>
-        <p class="faq-answer">A: RyTuneX is designed to work seamlessly with every PC running Windows 10 20H1 or later. I continuously update RyTuneX to ensure compatibility with the latest hardware and software configurations.</p>
-    </div>
-
-    <div class="faq">
-        <div class="faq-question">
-            <h3>Q: How can I get support for RyTuneX?</h3>
-            <span class="arrow">&#9660;</span>
-        </div>
-        <p class="faq-answer">A: If you have any questions or need support, feel free to join our <a target="_SEJ" href="https://discord.gg/gyBzyd364t">Discord Community</a> to connect with the support team and fellow users.</p>
+        <section class="features">
+            
+            <div style="cursor: pointer;" class="feature" id="advanced">
+                <h3>Advanced Optimizations</h3>
+                <p>Advanced system settings.</p>
+            </div>
+            
+            <div style="cursor: pointer;" class="feature" id="basic">
+                <h3>Basic Optimizations</h3>
+                <p>Fundamental performance tweaks.</p>
+            </div>
+            
+            <div style="cursor: pointer;" class="feature" id="performance">
+                <h3>Performance Tweaks</h3>
+                <p>Targeted performance tweaks.</p>
+            </div>
+            
+            <div style="cursor: pointer;" class="feature" id="privacy">
+                <h3>Enhance Privacy</h3>
+                <p>Data protection settings.</p>
+            </div>
+            
+            <div style="cursor: pointer;" class="feature" id="systemfeatures">
+                <h3>System Features</h3>
+                <p>Customize system functionalities.</p>
+            </div>
+            
+            <div style="cursor: pointer;" class="feature" id="telemetry">
+                <h3>Telemetry</h3>
+                <p>Control data collection.</p>
+            </div>
+            
+            <div style="cursor: pointer;" class="feature" id="windows11">
+                <h3>Windows 11</h3>
+                <p>Optimizations for Windows 11.</p>
+            </div>
+        </section>
     </div>
     
-    <script>
-        var faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(function(question) {
-            question.addEventListener('click', function() {
-                var answer = this.nextElementSibling;
-                var arrow = this.querySelector('.arrow');
-                answer.classList.toggle('visible');
-                this.classList.toggle('active');
-            });
-        });
-    </script>
-</section>
-
-    <section>
-        <h2>Contact The Developer</h2>
-        <p>Have questions or feedback? Feel free to reach out:</p>
-        <p>Email: <a href="mailto:ghanmirayen12@gmail.com" target="_blank">ghanmirayen12@gmail.com</a></p>
-        <p>Twitter: <a href="https://twitter.com/rayen_ghanmi_23" target="_blank">@rayen_ghanmi_23</a></p>
-        <p>Facebook: <a href="https://www.facebook.com/rayen.ghanmi.23" target="_blank">rayen.ghanmi.23</a></p>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Have questions or feedback? Feel free to reach out:</p>
+            <ul>
+                <li>Email: <a href="mailto:ghanmirayen12@gmail.com">ghanmirayen12@gmail.com</a></li>
+                <li>Twitter: <a href="https://twitter.com/rayen_ghanmi_23">rayen_ghanmi_23</a></li>
+                <li>Instagram: <a href="https://instagram.com/rayen.ghanmi.23">rayen.ghanmi.23</a></li>
+                <li>Github: <a href="https://github.com/rayenghanmi">rayenghanmi</a></li>
+            </ul>
+        </div>
     </section>
 
     <footer>
-        <p class="license">&copy; 2024 Rayen Ghanmi. Licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">AGPL v3.0</a>.</p>
-    </footer> 
+        <p>&copy; 2024 Rayen Ghanmi. All rights reserved.</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
