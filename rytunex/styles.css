@@ -96,6 +96,10 @@ header {
     margin-bottom: 10px;
 }
 
+.feature ul {
+    padding-left: 20px;
+}
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -123,7 +127,7 @@ header {
 
 a:not(.button) {
     text-decoration: none;
-    color: inherit;
+    color: #eeb8cd;
     font-weight: bold;
     position: relative;
     transition: all 0.3s ease;
@@ -135,7 +139,7 @@ a:not(.button):hover {
 
 
 .footer {
-    background-color: #1f2937;
+    background-color: #3b3b3b;
     color: #fff;
     text-align: center;
     padding: 20px 0;
