@@ -241,3 +241,7 @@ a:not(.button):hover {
   .custom-scrollbar::-moz-scrollbar-track {
     background-color: #333;
   }
+
+  .checked {
+    color: orange;
+}

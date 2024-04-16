@@ -2,21 +2,43 @@
 <html class="custom-scrollbar" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
-    <meta property="og:title" content="RyTuneX">
-    <meta property="og:description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
-    <meta property="og:url" content="https://rayenghanmi.github.io/rytunex">
-    <meta property="og:image" content="https://rayenghanmi.github.io/sources/og.jpg">
-    <meta property="og:type" content="website">
-    <title>RyTuneX</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>RyTuneX - Windows 10 and 11 Optimizer | Boost Performance & Privacy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Optimize your Windows 10 and 11 systems for improved performance and privacy with RyTuneX. Easily remove unwanted apps, tweak system settings, and enhance your computing experience.">
+        <link rel="canonical" href="https://rayenghanmi.github.io/rytunex" />
+        <link rel="canonical" href="https://rayenghanmi.github.io/rytunex" />
+        <meta property="og:title" content="RyTuneX">
+        <meta property="og:description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
+        <meta property="og:url" content="https://rayenghanmi.github.io/rytunex">
+        <meta property="og:image" content="https://rayenghanmi.github.io/sources/og.jpg">
+        <meta property="og:type" content="website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="RyTuneX">
+        <meta name="twitter:description" content="Official Website for RyTuneX, Windows 10 and 11 Optimizer.">
+        <meta name="twitter:url" content="https://rayenghanmi.github.io/rytunex">
+        <meta name="twitter:image" content="https://rayenghanmi.github.io/sources/og.jpg">
+        <meta name="twitter:site" content="@rayen_ghanmi_23">
+        <meta name="twitter:creator" content="@rayen_ghanmi_23">
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "RyTuneX",
+          "url": "https://rayenghanmi.github.io/rytunex",
+          "logo": "https://rayenghanmi.github.io/sources/og.jpg",
+          "description": "Windows 10 and 11 Optimizer"
+        }
+        </script>
+    </head>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<script src="https://tfpb.techforpalestine.org/lib/banner.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://tfpb.techforpalestine.org/lib/banner.min.js"/></script>
     <script>
       TFPBanner.create({
         theme: "dark",
@@ -27,11 +49,54 @@
 
 <body>
     <header>
-        <img src="rytunex.png" alt="RyTuneX Logo" class="logo">
-        <h1>RyTuneX</h1>
+        <img src="rytunex.png" alt="RyTuneX Logo - Windows 10 and 11 Optimizer" class="logo">
+        <h1 id="latestVersion">RyTuneX</h1>
         <p>Windows 10 and 11 Optimizer, By Rayen Ghanmi</p>
+        <p style="font-weight:350 ;font-size: 13px;" id="downloadCount">Over 1.6k downloads</p>
     </header>
-
+    <script>
+        function formatCount(count) {
+            if (count >= 1e6) {
+                return `${(count / 1e6).toFixed(1)}M`;
+            } else if (count >= 1e3) {
+                return `${(count / 1e3).toFixed(1)}k`;
+            } else {
+                return count.toString();
+            }
+        }
+    
+        function getCurrentYearAndMonth() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.toLocaleString('default', { month: 'long' });
+            return `${month} ${year}`;
+        }
+    
+        fetch('https://api.github.com/repos/rayenghanmi/RyTuneX/releases')
+            .then(response => response.json())
+            .then(data => {
+                // Get latest version
+                const latestRelease = data[0]; // Assuming releases are sorted in descending order
+                const latestVersion = latestRelease.tag_name;
+    
+                // Calculate total downloads
+                let totalCount = 0;
+                data.forEach(release => {
+                    totalCount += release.assets.reduce((acc, asset) => acc + asset.download_count, 0);
+                });
+    
+                const currentYearAndMonth = getCurrentYearAndMonth();
+                document.getElementById('latestVersion').textContent = `RyTuneX ${latestVersion}`;
+                document.getElementById('downloadCount').innerHTML = `Over <strong>${formatCount(totalCount)}</strong> downloads as of <strong>${currentYearAndMonth}</strong>`;
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                document.getElementById('latestVersion').textContent = 'RyTuneX';
+                document.getElementById('downloadCount').textContent = 'Over 1.6k downloads';
+            });
+    </script>
+    
+    
     <nav class="navbar">
         <ul>
             <li><a href="#about">About</a></li>
@@ -47,7 +112,7 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About RyTuneX</h2>
-            <p>RyTuneX is all about making your Windows experience better. It's designed to optimize your Windows 10 and 11 systems for improved performance and privacy. With RyTuneX, you can easily remove unwanted apps, tweak system settings, and enhance your overall computing experience.</p>
+            <p>Enhance your Windows 10 and 11 performance and privacy with RyTuneX. This tool allows you to optimize system resources, remove unwanted apps, and tweak settings for a better computing experience.</p>
         </div>
     </section>
 
@@ -57,15 +122,15 @@
             <div class="features">
                 <div class="feature">
                     <h3>Optimize Performance</h3>
-                    <p>Streamline system resources to enhance overall performance.</p>
+                    <p>Boost system performance by streamlining resources and enhancing responsiveness.</p>
                 </div>
                 <div class="feature">
                     <h3>Remove Unwanted Apps</h3>
-                    <p>Easily uninstall stubborn pre-installed apps.</p>
+                    <p>Effortlessly uninstall unwanted pre-installed apps to free up storage space.</p>
                 </div>
                 <div class="feature">
                     <h3>Enhance Privacy</h3>
-                    <p>Block telemetry and data collection processes for increased privacy.</p>
+                    <p>Protect your privacy by blocking telemetry and data collection processes.</p>
                 </div>
             </div>
         </div>
@@ -105,6 +170,28 @@
         </div>
     </section>
 
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <p>Read testimonials from our satisfied users who have optimized their Windows experience with RyTuneX:</p>
+            <lu>
+                <li class="feature">"I'll give it 8.5/10" <span style="font-weight: bold;">Raed</span></li>
+                <li class="feature">"It's amazing 😍 6/10" <span style="font-weight: bold;">Molka</span></li>
+                <li class="feature">"Its good app, it gives you good experience with windows, all low end and high end pc need this app 9/10" <span style="font-weight: bold;">Raouf</span></li>
+                <li class="feature">"It works perfect for me 😇" <span style="font-weight: bold;">Kunal</span></li>
+            </lu>
+            <div class="average-rating">
+                <h3>Average Rating: </h3>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+        </div>
+        
+    </section>
+    
     <section id="download" class="section">
         <div class="container">
             <h2>Download RyTuneX</h2>
@@ -144,7 +231,7 @@
             
             <div class="faq">
                 <h3>Q: How can I get support for RyTuneX?</h3>
-                <p>If you need support or have any questions, you can join our <a target="_SEJ" href="https://discord.gg/gyBzyd364t">Discord Community</a> to connect with our support team and other users.</p>
+                <p>If you need support or have any questions, you can join our <a target="_blank" href="https://discord.gg/gyBzyd364t">Discord Community</a> to connect with our support team and other users.</p>
             </div>
         </div>
     </section>
@@ -194,13 +281,14 @@
     
     <section id="contact" class="section">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Have questions or feedback? Feel free to reach out:</p>
+            <h2>Contact Us</h2>
+            <p>Got questions or feedback? Reach out through the following links:</p>
             <ul>
-                <li>Email: <a href="mailto:ghanmirayen12@gmail.com">ghanmirayen12@gmail.com</a></li>
-                <li>Twitter: <a href="https://twitter.com/rayen_ghanmi_23">rayen_ghanmi_23</a></li>
-                <li>Instagram: <a href="https://instagram.com/rayen.ghanmi.23">rayen.ghanmi.23</a></li>
-                <li>Github: <a href="https://github.com/rayenghanmi">rayenghanmi</a></li>
+                <li>Discord: <a target="_blank" href="https://discord.gg/gyBzyd364t">RyTuneX</a></li>
+                <li>Email: <a target="_blank" href="mailto:ghanmirayen12@gmail.com">ghanmirayen12@gmail.com</a></li>
+                <li>Twitter: <a target="_blank" href="https://twitter.com/rayen_ghanmi_23">@rayen_ghanmi_23</a></li>
+                <li>Instagram: <a target="_blank" href="https://instagram.com/rayen.ghanmi.23">@rayen.ghanmi.23</a></li>
+                <li>Github: <a target="_blank" href="https://github.com/rayenghanmi">rayenghanmi</a></li>
             </ul>
         </div>
     </section>
