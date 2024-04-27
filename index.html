@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="custom-scrollbar">
-
-<head>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Rayen Ghanmi - Projects and Development</title>
@@ -11,251 +9,238 @@
         <meta property="og:title" content="Rayen Ghanmi">
         <meta property="og:description" content="Landing page for my current and upcoming projects. Explore RyTuneX, Pixel Knight, and my Discord bot development.">
         <meta property="og:url" content="https://rayenghanmi.github.io">
-        <meta property="og:image" content="https://rayenghanmi.github.io/sources/og.jpg">
+        <meta property="og:image" content="https://rayenghanmi.github.io/assets/og.jpg">
         <meta property="og:type" content="website">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Rayen Ghanmi">
         <meta name="twitter:description" content="Landing page for my current and upcoming projects. Explore RyTuneX, Pixel Knight, and my Discord bot development.">
         <meta name="twitter:url" content="https://rayenghanmi.github.io">
-        <meta name="twitter:image" content="https://rayenghanmi.github.io/sources/og.jpg">
+        <meta name="twitter:image" content="https://rayenghanmi.github.io/assets/og.jpg">
         <meta name="twitter:site" content="@rayen_ghanmi_23">
         <meta name="twitter:creator" content="@rayen_ghanmi_23">
-        <script type="application/ld+json">
+	    <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "Person",
           "name": "Rayen Ghanmi",
           "url": "https://rayenghanmi.github.io",
-          "image": "https://rayenghanmi.github.io/sources/og.jpg",
+          "image": "https://rayenghanmi.github.io/assets/og.jpg",
           "description": "Developer and creator of RyTuneX, Pixel Knight, and Discord bots"
         }
         </script>
-    </head>    
-    <link rel="shortcut icon" href="sources/favicon.ico" type="image/x-icon">
-    <style>
-        .custom-scrollbar {
-          user-select: none;
-          -webkit-user-select: none;
-          -ms-user-select: none;
-        }
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- =====BOX ICONS===== -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Rayen</a>
+                </div>
 
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 10px;
-        }
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #f177a6;
-          border-radius: 15px;
-        }
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background-color: #333333;
-        }
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Rayen</span><br> A Software Dev</h1>
 
-        .custom-scrollbar::-moz-scrollbar {
-          width: 10px;
-        }
+                    <a href="#contact" class="button">Contact</a>
+                </div>
 
-        .custom-scrollbar::-moz-scrollbar-thumb {
-          background-color: #f177a6;
-          border-radius: 15px;
-        }
+                <div class="home__social">
+                    <a target="_blank" href="https://facebook.com/rayen.ghanmi.23" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
+                    <a target="_blank" href="https://instagram.com/rayen.ghanmi.23" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a target="_blank" href="https://twitter.com/rayen_ghanmi_23" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a target="_blank" href="https://github.com/rayenghanmi" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a target="_blank" href="https://discord.gg/gyBzyd364t" class="home__social-icon"><i class='bx bxl-discord-alt' ></i></a>
+                </div>
 
-        .custom-scrollbar::-moz-scrollbar-track {
-          background-color: #333333;
-        }
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="-20" y="-10" transform="scale(1.5)" target="_blank" href="assets/img/perfil.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
 
-        header {
-            background-color: #1e1e1e;
-            padding: 20px;
-            text-align: center;
-        }
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'm Rayen Ghanmi</h2>
+                        <p class="about__text">I'm a biology student with a passion for computers and technology. Since childhood, I've been fascinated by programming and have developed several projects, including RGH Optimizer (a Windows optimization tool using Python), Pixel Night (a small 2D Android game), and my current big project, RyTuneX (a Windows 10 and 11 optimizer made using WinUI 3).</p>           
+                    </div>                                  
+                </div>
+            </section>
 
-        h1 {
-            color: #f177a6;
-        }
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
 
-        nav ul {
-            list-style: none;
-            padding: 15px 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">Here are some of my skills that I've aquired through the years:</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-python skills__icon'></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+                            <div class="skills__bar skills__python">
 
-        nav ul li {
-            margin: 0;
-            padding: 10px;
-        }
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
 
-        main {
-            background-color: transparent;
-            border-radius: 1.563em;
-            padding: 20px;
-        }
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">50%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">45%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bx-code-curly skills__icon'></i>
+                                <span class="skills__name">C#</span>
+                            </div>
+                            <div class="skills__bar skills__cs">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/top.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
 
-        section {
-            margin-bottom: 30px;
-            border-radius: 8px;
-            border: 1px solid #333333;
-            padding: 20px;
-            text-align: justify;
-        }
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Current Project</h2>
 
-        h2 {
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
+                <div class="work__container bd-grid">
+                    <div class="work__description">
+                        <h2 class="work__subtitle">RyTuneX</h2>
+                        <p class="work__text">RyTuneX is a Windows 10 and 11 optimizer made using WinUI 3. It includes various features to speed up systems and remove bloat.</p>
+                    </div>
+                    <a target="_blank" href="./rytunex/index.html" class="work__img">
+                        <img src="assets/img/rytunex1.png" alt="">
+                    </a>
+                    <a target="_blank" href="./rytunex/index.html" class="work__img">
+                        <img src="assets/img/rytunex2.png" alt="">
+                    </a>
+                    <a target="_blank" href="./rytunex/index.html" class="work__img">
+                        <img src="assets/img/rytunex3.png" alt="">
+                    </a>
+                    <a target="_blank" href="./rytunex/index.html" class="work__img">
+                        <img src="assets/img/rytunex4.png" alt="">
+                    </a>
+                    <a target="_blank" href="./rytunex/index.html" class="work__img">
+                        <img src="assets/img/rytunex5.png" alt="">
+                    </a>
+                </div>
+            </section>
 
-        footer {
-            background-color: #1e1e1e;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            transition: transform 0.5s ease;
-            transform: translateY(0);
-        }
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
 
-        .footer-hide {
-            transform: translateY(100%);
-        }
+                <div class="contact__container bd-grid">
+                    <form class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input" name="Name">
+                        <input type="mail" placeholder="Email" class="contact__input" name="Email">
+                        <textarea cols="0" rows="10" class="contact__input" name="Message"></textarea>
+                        <input type="submit" value="Send" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
 
-        #footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Rayen Ghanmi</p>
+            <div class="footer__social">
+                <a target="_blank" href="https://facebook.com/rayen.ghanmi.23" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a target="_blank" href="https://instagram.com/rayen.ghanmi.23" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a target="_blank" href="https://twitter.com/rayen_ghanmi_23" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a target="_blank" href="https://github.com/rayenghanmi" class="footer__icon"><i class='bx bxl-github' ></i></a>
+                <a target="_blank" href="https://discord.gg/gyBzyd364t" class="footer__icon"><i class='bx bxl-discord-alt' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; Rayen Ghanmi. All rigths reserved</p>
+            <a target="_blank" href="https://techforpalestine.org/learn-more/"><p style="text-align: center; margin: 0.2em; color: #fff;">Call for a #CeasefireNOW</p></a>
+        </footer>
 
-        #footer-links a {
-            margin: 0 10px;
-            color: #f177a6;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
 
-        #footer-links a:hover {
-            color: #e44d80;
-        }
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-        a {
-            color: #f177a6;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #e44d80;
-        }
-
-        #corner {
-            font-family: normaltext;
-            font-size: 1.2em;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 0.5em;
-            border-radius: 15px;
-            width: 300px;
-            margin: 0 auto;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .social {
-            width: 50px;
-            height: 50px;
-        }
-
-        img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-        }
-    </style>
-    <script src="https://tfpb.techforpalestine.org/lib/banner.min.js"></script>
-    <script>
-      TFPBanner.create({
-        theme: "auto",
-        fixed: false,
-      });
-    </script>
-</head>
-<body class="bg-color">
-    <header>
-        <img src="./sources/rytunex.png" alt="RyTuneX Logo" style="max-width: 65px; height: auto; margin-bottom: 5px;">
-        <h1>Rayen Ghanmi</h1>
-        <p>Self-taught Developer</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html" title="Home">Home</a></li>
-            <li><a href="#introduction" title="Introduction">Introduction</a></li>
-            <li><a href="#RyTuneX" title="RyTuneX">RyTuneX</a></li>
-            <li><a href="#discord-bot" title="Discord bot">Discord bot</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>• I'm Rayen Ghanmi, an enthusiastic and creative person with a passion for programming and game development. As a dedicated student, I am continuously expanding my knowledge and honing my skills to bring exciting and immersive gaming experiences to life. Whether it's crafting captivating storylines, designing interactive gameplay mechanics, or delving into the intricacies of coding, I find joy in every aspect of the game development process. My love for programming allows me to embrace challenges and seek innovative solutions, always striving to push the boundaries of what's possible in the gaming world. Join me on this thrilling journey as we embark on adventures beyond imagination, with games that will captivate your heart and mind!</p>
-        </section>
-
-        <section id="RyTuneX">
-            <h2><img style="width: 45px; height: 45px; vertical-align: middle; padding-right: 5px;" src="sources/rytunex.png" alt="RyTuneX Logo"> RyTuneX</h2>
-            <p>• Introducing RyTuneX, a revolutionary app based on the WinUI 3 framework, developed by Rayen Ghanmi. RyTuneX is designed to boost the performance of your device and breathe new life into older models in today's fast-paced world.</p>
-            <p>• "RyTuneX offers a second chance for aging devices to thrive in the modern era."</p>
-            <p>• Visit RyTuneX's <a href="rytunex/index.html" title="RyTuneX Website">website</a></p>
-        </section>
-
-        <section id="discord-bot">
-            <h2><img style="width: 45px; height: 45px; vertical-align: middle; padding-right: 5px;" src="sources/favicon.ico" alt="Bot Logo"> Discord bot</h2>
-            <p>• I'm currently working on a Discord bot made using Python</p>
-            <p>• <a href="https://github.com/rayenghanmi/discord-bot/blob/main/bot.py" title="View Bot on GitHub">Check it out</a>.</p>
-        </section>
-        <p class="center" id="corner">If you're a music enthusiast:</p>
-        <br>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3O2bPGGsEIllpoBfkv48GY?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <br><br><br><br><br><br><br><br><br>
-    </main>
-    <footer id="footer">
-        <p class="center" id="corner">Contact Me:</p>
-        <br>
-        <div id="footer-links">
-            <a target="_SEJ" href="https://facebook.com/rayen.ghanmi.23" class="center"><p>Facebook</p></a>
-            <a target="_SEJ" href="https://twitter.com/rayen_ghanmi_23" class="center"><p>Twitter</p></a>
-            <a target="_SEJ" href="https://instagram.com/rayen.ghanmi.23" class="center"><p>Instagram</p></a>
-            <a target="_SEJ" href="https://github.com/rayenghanmi" class="center"><p>GitHub</p></a>
-            <a target="_SEJ" href="https://reddit.com/u/rayen_ghanmi_22" class="center"><p>Reddit</p></a>
-            <a target="_SEJ" href="https://discord.gg/gyBzyd364t" class="center"><p>Discord</p></a>
-            <a target="_SEJ" href="https://wa.me/+21658791318" class="center"><p>WhatsApp</p></a>
-        </div>
-    </footer>
-    <script>
-        window.onscroll = function () {
-            let footer = document.querySelector("footer");
-            let distanceFromBottom = document.body.scrollHeight - window.innerHeight - window.scrollY;
-
-            if (distanceFromBottom < 30) {
-                footer.classList.remove("footer-hide");
-            } else {
-                footer.classList.add("footer-hide");
-            }
-        }
-    </script>
-</body>
-
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/submit.js"></script>
+    </body>
 </html>
