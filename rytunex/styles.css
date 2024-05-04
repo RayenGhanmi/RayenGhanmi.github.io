@@ -1,14 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 @font-face {
-    font-family: 'Fluent';
-    src: url('assets/segoe_fluent.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'Segoe MDL2 Assets'; /* Font name to be used */
-    src: url('assets/segmdl2.ttf') format('truetype'); /* Path to the font file */
+    font-family: 'Segoe MDL2 Assets';
+    src: url('assets/segmdl2.ttf') format('truetype');
 }
 
 body {
-    font-family: 'Fluent', sans-serif;
+    font-family: 'Exo', sans-serif;
 }
 header {
     position: relative;
@@ -206,4 +203,17 @@ a:hover {
 }
 .custom-scrollbar::-moz-scrollbar-track {
   background-color: #333;
+}
+.notice {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    border-color: rgba(161, 83, 113, 0.5);
+    background-color: rgba(241, 119, 166, 0.5);
+    border-radius: 8px;
+    backdrop-filter: blur(50px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
