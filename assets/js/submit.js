@@ -4,15 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // Prevent default form submission
 
-        const name = document.querySelector(".contact__input[name='Name']").value;
         const email = document.querySelector(".contact__input[name='Email']").value;
         const message = document.querySelector(".contact__input[name='Message']").value;
 
         // Discord webhook URL
         const webhookUrl = "https://discord.com/api/webhooks/1233804873523265639/YhpPEsJlpc7qjGNKUNLw4b-cmhMdzw5au4RcNv1NqMFiOxvZaoFlexC_vtLFllZa7t41";
 
+        // Creating an embed object
+        const embed = {
+            author: {
+                "name": email,
+                "url": `https://mail.google.com/mail/u/1/?view=cm&fs=1&to=${email}&su=Form+received`,
+                "icon_url": "https://cdn.discordapp.com/embed/avatars/1.png"
+                },
+            description: `**Message:**\n${message}`,
+            color: parseInt(Math.floor(Math.random() * 16777215).toString(16), 16)
+        };
+
         const payload = {
-            content: `New message from ${name} (${email}):\n${message}`
+            embeds: [embed] // Discord expects an array of embeds
         };
 
         try {
