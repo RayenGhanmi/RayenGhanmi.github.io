@@ -169,6 +169,10 @@ i {
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
 }
 
+.footer p {
+font-size: 14px;
+}
+
 a {
     color: #f177a6;
     text-decoration: none;
