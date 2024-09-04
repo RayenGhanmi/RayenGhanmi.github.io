@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="custom-scrollbar" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="styles.css">
+
+<title>Download</title>
+</head>
+<body>
+    <header>
+        <div class="app-name-container">
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <span class="app-name">Downloading RyTuneX</span>
+        </div>
+    </header>
+
+<div class="main">
+    <section class="section">
+    <div class="features">
+        <div class="feature">
+            <h2>Thank You for Downloading RyTuneX!</h2>
+            <p>I appreciate your support. Please consider starring the repository to help me continue improving this project.</p>
+            <a href="https://github.com/rayenghanmi/RyTuneX" class="star-button">&#11088; Star</a>
+        </div>
+    </div>
+    </section>
+</div>
+
+<div onload="download()"></div>
+<a id="dl" style="display: none"
+    href="https://github.com/rayenghanmi/RyTuneX/releases/latest/download/RyTuneX.Setup.zip"
+    download>Download</a>
+    <script>
+        (function download() {
+            document.getElementById('dl').click();
+        })()
+        </script>
+
+</body>
+</html>
