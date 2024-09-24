@@ -55,6 +55,7 @@ button {
     cursor: pointer;
     font-size: 16px; /* Optional: Increase font size for better visibility */
     margin-top: 20px; /* Add space above the button */
+    margin-bottom: 50px;
 }
 
 /* Button hover effect */
