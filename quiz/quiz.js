@@ -43,7 +43,6 @@ const questions = [
 
 let score = 0;
 
-// Shuffle function to randomize answers
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -52,15 +51,13 @@ function shuffle(array) {
     return array;
 }
 
-// Load quiz questions
 function loadQuiz() {
     const quizQuestionsDiv = document.getElementById('quiz-questions');
     quizQuestionsDiv.innerHTML = ''; // Clear any previous content
 
     questions.forEach((q, index) => {
-        const shuffledAnswers = shuffle([...q.answers]); // Randomize answers
+        const shuffledAnswers = shuffle([...q.answers]);
 
-        // Generate HTML for each question
         let questionBlock = `
             <div class="question">
                 <h3>${q.question}</h3>`;
@@ -78,7 +75,6 @@ function loadQuiz() {
     });
 }
 
-// Check answers and display results
 function checkAnswers() {
     const form = document.getElementById('quiz-form');
     const resultDiv = document.getElementById('result');
@@ -86,19 +82,17 @@ function checkAnswers() {
     const resultScore = document.getElementById('result-score');
     score = 0;
 
-    // Validate answers
     questions.forEach((q, index) => {
         const userAnswer = form[`question${index}`].value;
-        if (userAnswer === q.answers[0]) { // Check if the selected answer is correct
-            score += 10; // Each correct answer adds 10 points
+        if (userAnswer === q.answers[0]) {
+            score += 10;
         }
     });
 
-    // Hide the quiz form and display the result
     form.style.display = 'none';
-    resultDiv.style.display = 'block'; // Show result div
+    resultDiv.style.display = 'block';
+    resultDiv.classList.add('fade-in');
 
-    // Set the result message and score
     if (score >= 70) {
         resultMessage.textContent = "Congratulations, you passed!";
     } else {
@@ -108,5 +102,31 @@ function checkAnswers() {
     resultScore.textContent = `Your score is: ${score}/100`;
 }
 
-// Load quiz on page load
-document.addEventListener('DOMContentLoaded', loadQuiz);
+document.addEventListener('DOMContentLoaded', () => {
+    loadQuiz();
+
+    const themeToggle = document.getElementById('toggle');
+    const body = document.body;
+
+    const storedMode = localStorage.getItem('colorMode');
+    if (storedMode) {
+        body.classList.toggle('dark-mode', storedMode === 'dark');
+        themeToggle.checked = storedMode === 'dark';
+    }
+
+    themeToggle.addEventListener('change', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('colorMode', body.classList.contains('dark-mode') ? 'dark' : 'light');
+
+        // Ensure quiz container also reflects the dark mode
+        const quizContainer = document.querySelector('.quiz-container');
+        quizContainer.classList.toggle('dark-mode', body.classList.contains('dark-mode'));
+    });
+
+    document.getElementById('try-again').addEventListener('click', () => {
+        loadQuiz();
+        score = 0;
+        document.getElementById('quiz-form').style.display = 'block';
+        document.getElementById('result').style.display = 'none';
+    });
+});
