@@ -8,25 +8,19 @@
 </head>
 <body>
     <div class="quiz-container">
-        <h1 id="quiz-title">Quiz Time!</h1>
-
-        <div id="theme-switcher">
-            <label for="toggle">Dark Mode</label>
-            <input type="checkbox" id="toggle">
-        </div>
-
+        <h1>Test Your Knowledge</h1>
         <form id="quiz-form">
             <div id="quiz-questions"></div>
-            <button type="button" id="submit-button" onclick="checkAnswers()">Submit</button>
+            <button type="button" id="submit-btn" onclick="checkAnswers()">Submit Answers</button>
         </form>
 
-        <div id="result" style="display: none;">
+        <!-- Result section moved inside the container -->
+        <div id="result" class="result">
             <h2 id="result-message"></h2>
             <p id="result-score"></p>
-            <button id="try-again">Try Again</button>
+            <button onclick="location.reload()">Try Again</button>
         </div>
     </div>
-
     <script src="quiz.js"></script>
 </body>
 </html>

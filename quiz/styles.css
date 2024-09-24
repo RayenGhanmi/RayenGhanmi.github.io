@@ -5,98 +5,45 @@ html, body {
     height: 100%;
     overflow: hidden; /* Prevent outer scrollbar */
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Light mode background */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-body.dark-mode {
-    background-color: #121212; /* Dark mode background */
-    color: #ffffff; /* Dark mode text color */
+/* Background styling for the body */
+body {
+    background-image: url('1.jpg'); /* Update with your PNG path */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the background */
 }
 
 /* Quiz container with scrollable content */
 .quiz-container {
-    background-color: #ffffff;
+    background-color: rgba(35, 39, 42, 0.8); /* Transparent background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     width: 100%; /* Responsive width */
     max-width: 600px;
     margin: auto; /* Center horizontally */
-    overflow-y: auto; /* Scrollable content */
+    overflow-y: scroll; /* Enable scrolling within container */
     height: 100vh; /* Take full height of the viewport */
     box-sizing: border-box; /* Include padding and border in the element’s total width and height */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
-.quiz-container.dark-mode {
-    background-color: #1e1e1e; /* Dark mode container background */
+/* Hide scrollbar for webkit browsers (Chrome, Safari) */
+.quiz-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
 }
 
+/* Hide scrollbar for Firefox */
+.quiz-container {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
 
 /* Heading styling */
 h1 {
-    color: #333; /* Light mode color */
+    color: #ffffff; /* Light color for text */
     margin-top: 0;
-}
-
-/* Dark mode heading color */
-body.dark-mode h1 {
-    color: #ffffff; /* Change to white in dark mode */
-}
-
-/* Hide scrollbar */
-.quiz-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-}
-
-.toggle-label {
-    display: flex;
-    align-items: center;
-}
-
-.toggle-label input {
-    display: none; /* Hide the default checkbox */
-}
-
-.toggle-switch {
-    width: 40px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 50px;
-    position: relative;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.toggle-switch::before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    left: 2px;
-    bottom: 1px;
-    transition: transform 0.3s;
-}
-
-input:checked + .toggle-switch {
-    background-color: #4caf50; /* Color when checked */
-}
-
-input:checked + .toggle-switch::before {
-    transform: translateX(20px); /* Move the toggle */
-}
-
-/* Dark mode toggle switch */
-input[type="checkbox"]:checked + .toggle-switch {
-    background: #4caf50; /* Color when checked */
-}
-
-input[type="checkbox"]:checked + .toggle-switch::before {
-    transform: translateX(25px); /* Move switch to the right */
 }
 
 /* Ensure that questions area is scrollable if necessary */
@@ -107,6 +54,7 @@ input[type="checkbox"]:checked + .toggle-switch::before {
 /* Each question block styling */
 .question {
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 /* Styling for the labels */
@@ -114,11 +62,19 @@ label {
     display: block;
     margin: 5px 0;
     font-size: 16px;
+    color: #ffffff; /* Light color for text */
 }
 
-/* Button styling with glowing effect */
+/* Radio button styling */
+input[type="radio"] {
+    accent-color: #007bff; /* Change to medical blue */
+    width: 20px; /* Increase the size of the radio button */
+    height: 20px; /* Increase the size of the radio button */
+}
+
+/* Button styling */
 button {
-    background-color: #4caf50;
+    background-color: #007bff; /* Medical blue button */
     color: white;
     border: none;
     padding: 15px 30px; /* Increased padding for height */
@@ -126,15 +82,12 @@ button {
     cursor: pointer;
     font-size: 16px; /* Optional: Increase font size for better visibility */
     margin-top: 20px; /* Add space above the button */
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5), 0 0 20px rgba(76, 175, 80, 0.7), 0 0 30px rgba(76, 175, 80, 0.9); /* Glowing effect */
-    transition: all 0.3s ease; /* Transition for smooth effects */
+    margin-bottom: 50px;
 }
 
 /* Button hover effect */
 button:hover {
-    background-color: #45a049;
-    transform: scale(1.05); /* Slightly increase size on hover */
-    box-shadow: 0 0 10px rgba(76, 175, 80, 1), 0 0 30px rgba(76, 175, 80, 1), 0 0 40px rgba(76, 175, 80, 1); /* Stronger glow on hover */
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 /* Result section */
@@ -142,46 +95,14 @@ button:hover {
     display: none; /* Initially hidden */
     text-align: center;
     padding: 20px;
-    opacity: 0; /* Start invisible for fade-in effect */
-    transition: opacity 0.5s ease; /* Fade transition */
 }
 
 #result h2 {
     font-size: 24px;
-    color: #333; /* Light mode result color */
-}
-
-/* Dark mode result color */
-body.dark-mode #result h2 {
-    color: #ffffff; /* Change to white in dark mode */
+    color: #ffffff; /* Light color for text */
 }
 
 #result p {
     font-size: 18px;
-}
-
-/* Fade-in animation */
-.fade-in {
-    opacity: 1; /* Fully visible */
-}
-
-/* Additional styles for the quiz title */
-h2 {
-    color: #333;
-    margin-top: 0;
-}
-
-/* Add some animations for the quiz container */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Apply animation to the quiz-container */
-.quiz-container {
-    animation: fadeIn 1s ease-in; /* Fade in effect for quiz container */
+    color: #ffffff; /* Light color for text */
 }
