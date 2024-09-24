@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Test Your Knowledge</h1>
+        <form id="quiz-form">
+            <div id="quiz-questions"></div>
+            <button type="button" id="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+        </form>
+
+        <!-- Result section moved inside the container -->
+        <div id="result" class="result">
+            <h2 id="result-message"></h2>
+            <p id="result-score"></p>
+            <button onclick="location.reload()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
