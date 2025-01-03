@@ -23,7 +23,7 @@ header {
 }
 html
 {
-    background-image: url('assets/background.webp');
+    background-image: url('assets/img/background.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
