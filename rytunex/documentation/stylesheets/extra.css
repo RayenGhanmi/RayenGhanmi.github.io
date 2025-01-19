@@ -1,0 +1,12 @@
+
+:root {
+  /* Primary colors */
+  --md-primary-fg-color:        #f177a6;
+  --md-primary-fg-color--light: #f7a6c1;
+  --md-primary-fg-color--dark:  #c25684;
+
+  /* Accent colors */
+  --md-accent-fg-color:         #ff6699;
+  --md-accent-fg-color--light:  #ff99bb;
+  --md-accent-fg-color--dark:   #cc5277;
+}
